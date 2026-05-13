@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --background: oklch(0.12 0.01 260);
+  --foreground: oklch(0.96 0.01 260);
+
+  /* Surface System */
+  --surface-primary: oklch(0.15 0.015 260);
+  --surface-secondary: oklch(0.18 0.02 260);
+  --surface-tertiary: oklch(0.22 0.025 260);
+
+  /* Brand */
+  --primary: oklch(0.72 0.18 255);
+  --primary-soft: oklch(0.62 0.14 255);
+
+  /* Semantic */
+  --success: oklch(0.72 0.16 145);
+  --warning: oklch(0.82 0.16 85);
+  --destructive: oklch(0.68 0.22 25);
+
+  /* Borders */
+  --border: oklch(0.26 0.02 260);
+
+  /* Glass */
+  --glass-bg: rgba(255,255,255,0.04);
+  --glass-border: rgba(255,255,255,0.08);
+
+  /* Glow */
+  --glow-primary: rgba(72, 120, 255, 0.35);
+
+  /* Radius */
+  --radius: 1.25rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at top, rgba(80,120,255,0.12), transparent 40%),
+    var(--background);
+
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+  min-height: 100vh;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
