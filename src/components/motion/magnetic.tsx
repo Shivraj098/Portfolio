@@ -19,31 +19,40 @@ export function Magnetic({
   const y = useMotionValue(0);
 
   const springX = useSpring(x, {
-    stiffness: 150,
-    damping: 15,
+    stiffness: 120,
+    damping: 18,
+    mass: 0.2,
   });
 
   const springY = useSpring(y, {
-    stiffness: 150,
-    damping: 15,
+    stiffness: 120,
+    damping: 18,
+    mass: 0.2,
   });
 
   function handleMouseMove(
     e: React.MouseEvent<HTMLDivElement>
   ) {
-    const rect = e.currentTarget.getBoundingClientRect();
+    const rect =
+      e.currentTarget.getBoundingClientRect();
 
     const width = rect.width;
     const height = rect.height;
 
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
+    const mouseX =
+      e.clientX - rect.left;
 
-    const xPct = mouseX / width - 0.5;
-    const yPct = mouseY / height - 0.5;
+    const mouseY =
+      e.clientY - rect.top;
 
-    x.set(xPct * 10);
-    y.set(yPct * 10);
+    const xPct =
+      mouseX / width - 0.5;
+
+    const yPct =
+      mouseY / height - 0.5;
+
+    x.set(xPct * 5);
+    y.set(yPct * 5);
   }
 
   function handleMouseLeave() {
@@ -59,7 +68,7 @@ export function Magnetic({
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="inline-block"
+      className="inline-flex"
     >
       {children}
     </motion.div>

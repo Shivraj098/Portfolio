@@ -3,7 +3,11 @@
 import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
-import { DURATIONS, TRANSITION } from "@/lib/motion";
+
+import {
+  DURATIONS,
+  TRANSITION,
+} from "@/lib/motion";
 
 type FadeInProps = {
   children: React.ReactNode;
@@ -18,7 +22,7 @@ export function FadeIn({
     <motion.div
       initial={{
         opacity: 0,
-        y: 24,
+        y: 16,
       }}
       whileInView={{
         opacity: 1,
@@ -26,11 +30,11 @@ export function FadeIn({
       }}
       viewport={{
         once: true,
-        margin: "-100px",
+        margin: "-80px",
       }}
       transition={{
-        duration: DURATIONS.medium,
-        ease: TRANSITION.smooth ,
+        duration: DURATIONS.slow,
+        ease: TRANSITION.gentle,
       }}
       className={cn(className)}
     >

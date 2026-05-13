@@ -1,22 +1,18 @@
 import { cn } from "@/lib/utils";
 
-type GlassCardProps =
-  React.HTMLAttributes<HTMLDivElement>;
+type GlassCardProps = React.HTMLAttributes<HTMLDivElement>;
 
-export function GlassCard({
-  className,
-  ...props
-}: GlassCardProps) {
+export function GlassCard({ className, ...props }: GlassCardProps) {
   return (
     <div
       className={cn(
-        "glass-surface rounded-[var(--radius)]",
-        "border border-white/5",
-        "shadow-2xl shadow-black/10",
-        "transition-all duration-500",
-        "hover:-translate-y-1",
-        "hover:border-white/10",
-        className
+        "glass-surface rounded-(--radius)",
+        "border border-white/8",
+        "shadow-[0_10px_50px_rgba(0,0,0,0.28)]",
+        "transition-all duration-300",
+        "hover:border-white/[0.14]",
+        "hover:bg-white/1.5",
+        className,
       )}
       {...props}
     />

@@ -24,7 +24,7 @@ export function SectionDescription({
   return (
     <p
       className={cn(
-        "max-w-2xl text-sm leading-relaxed text-white/60 md:text-base",
+        "max-w-2xl text-base leading-[1.8] text-white/72 md:text-lg",
         className
       )}
       {...props}

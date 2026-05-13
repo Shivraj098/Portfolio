@@ -10,11 +10,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-white text-black hover:scale-[1.02] hover:bg-white/90",
+          "bg-white text-black shadow-lg shadow-white/10 hover:bg-white/92",
         secondary:
-          "glass-surface text-white hover:bg-white/10",
-        ghost:
-          "text-white/70 hover:bg-white/5 hover:text-white",
+          "border border-white/[0.08] bg-white/[0.04] text-white hover:bg-white/[0.08]",
+        ghost: "text-white/70 hover:bg-white/5 hover:text-white",
       },
 
       size: {
@@ -27,11 +26,12 @@ const buttonVariants = cva(
       variant: "primary",
       size: "default",
     },
-  }
+  },
 );
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
@@ -52,7 +52,7 @@ export function Button({
           variant,
           size,
         }),
-        className
+        className,
       )}
       {...props}
     />

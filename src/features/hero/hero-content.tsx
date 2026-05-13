@@ -11,7 +11,7 @@ export function HeroContent() {
         AI & Full-Stack Systems Engineer
       </p>
 
-      <SectionHeading className="text-gradient text-6xl leading-[0.95] md:text-8xl xl:text-[9rem]">
+      <SectionHeading className="text-gradient text-5xl leading-[0.92] md:text-7xl xl:text-[7.5rem]">
         Building cinematic AI-native SaaS systems.
       </SectionHeading>
 

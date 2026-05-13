@@ -17,14 +17,14 @@ export function StaggerContainer({
       whileInView="show"
       viewport={{
         once: true,
-        margin: "-100px",
+        margin: "-80px",
       }}
       variants={{
         hidden: {},
 
         show: {
           transition: {
-            staggerChildren: 0.12,
+            staggerChildren: 0.08,
           },
         },
       }}

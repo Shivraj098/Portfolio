@@ -9,7 +9,7 @@ export function Section({
   return (
     <section
       className={cn(
-        "relative py-24 md:py-36",
+        "relative border-t border-white/4 py-28 md:py-40",
         className
       )}
       {...props}

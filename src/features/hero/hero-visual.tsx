@@ -8,7 +8,7 @@ export function HeroVisual() {
   return (
     <div className="relative hidden h-175 flex-1 items-center justify-center lg:flex">
       {/* Background Glow */}
-      <div className="absolute h-125 w-125 rounded-full bg-blue-500/20 blur-[120px]" />
+      <div className="absolute h-125 w-125 rounded-full bg-blue-500/20 blur-[90px]" />
 
       {/* Central Dashboard */}
       <motion.div
@@ -21,7 +21,7 @@ export function HeroVisual() {
           scale: 1,
         }}
         transition={{
-          duration: 1,
+          duration: 0.8,
         }}
         className="relative z-10"
       >
@@ -115,7 +115,7 @@ export function HeroVisual() {
       <motion.div
         initial={{
           opacity: 0,
-          y: 30,
+          y: 12,
         }}
         animate={{
           opacity: 1,
@@ -123,7 +123,7 @@ export function HeroVisual() {
         }}
         transition={{
           delay: 0.4,
-          duration: 1,
+          duration: 0.8,
         }}
         className="absolute left-0 top-24"
       >
@@ -145,7 +145,7 @@ export function HeroVisual() {
       <motion.div
         initial={{
           opacity: 0,
-          y: -30,
+          y: -12,
         }}
         animate={{
           opacity: 1,
@@ -153,7 +153,7 @@ export function HeroVisual() {
         }}
         transition={{
           delay: 0.6,
-          duration: 1,
+          duration: 0.8,
         }}
         className="absolute bottom-24 right-0"
       >

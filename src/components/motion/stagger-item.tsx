@@ -2,7 +2,10 @@
 
 import { motion } from "framer-motion";
 
-import { DURATIONS, TRANSITION } from "@/lib/motion";
+import {
+  DURATIONS,
+  TRANSITION,
+} from "@/lib/motion";
 
 type StaggerItemProps = {
   children: React.ReactNode;
@@ -18,7 +21,7 @@ export function StaggerItem({
       variants={{
         hidden: {
           opacity: 0,
-          y: 24,
+          y: 14,
         },
 
         show: {
