@@ -11,7 +11,7 @@ const navItems = [
   },
   {
     label: "Writing",
-    href: "#blog",
+    href: "/blog",
   },
   {
     label: "About",
