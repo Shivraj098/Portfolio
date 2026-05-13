@@ -35,7 +35,7 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between container-padding">
         <Link
           href="/"
-          className="text-sm font-medium tracking-wide text-white"
+          className="relative text-sm text-white/60 transition-all duration-300 hover:text-white after:absolute after:left-0 after:top-full after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
         >
           Shivraj
         </Link>
@@ -45,7 +45,7 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-white/60 transition-colors hover:text-white"
+              className="relative text-sm text-white/60 transition-all duration-300 hover:text-white after:absolute after:left-0 after:top-full after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
             >
               {item.label}
             </Link>

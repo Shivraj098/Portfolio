@@ -1,5 +1,8 @@
 import { GlassCard } from "@/components/shared/glass-card";
+import { StaggerContainer } from "@/components/motion/stagger-container";
+import { StaggerItem } from "@/components/motion/stagger-item";
 
+import { SpotlightCard } from "@/components/shared/spotlight-card";
 const features = [
   {
     title: "Custom ATS Scoring Engine",
@@ -38,22 +41,21 @@ export function HirePilotFeatures() {
         </p>
       </div>
 
-      <div className="mt-14 grid gap-6 lg:grid-cols-2">
+      <StaggerContainer className="mt-14 grid gap-6 lg:grid-cols-2">
         {features.map((feature) => (
-          <GlassCard
-            key={feature.title}
-            className="rounded-[1.75rem] p-8"
-          >
-            <h4 className="text-xl font-medium">
-              {feature.title}
-            </h4>
+          <StaggerItem key={feature.title}>
+            <SpotlightCard>
+              <GlassCard className="rounded-[1.75rem] p-8">
+                <h4 className="text-xl font-medium">{feature.title}</h4>
 
-            <p className="mt-5 leading-relaxed text-white/50">
-              {feature.description}
-            </p>
-          </GlassCard>
+                <p className="mt-5 leading-relaxed text-white/50">
+                  {feature.description}
+                </p>
+              </GlassCard>
+            </SpotlightCard>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
     </div>
   );
 }

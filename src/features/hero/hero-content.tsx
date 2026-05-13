@@ -3,11 +3,11 @@ import {
   SectionDescription,
   SectionHeading,
 } from "@/components/shared/typography";
-
+import { Magnetic } from "@/components/motion/magnetic";
 export function HeroContent() {
   return (
     <div className="relative z-10 max-w-3xl">
-      <p className="mb-6 text-xs uppercase tracking-[0.3em] text-white/40 md:text-sm">
+      <p className="mb-6 text-xs tracking-[0.3em] text-white/40 uppercase md:text-sm">
         AI & Full-Stack Systems Engineer
       </p>
 
@@ -22,16 +22,14 @@ export function HeroContent() {
       </SectionDescription>
 
       <div className="mt-10 flex flex-wrap gap-4">
-        <Button size="lg">
-          View Projects
-        </Button>
-
-        <Button
-          variant="secondary"
-          size="lg"
-        >
-          Resume
-        </Button>
+        <Magnetic>
+          <Button size="lg">View Projects</Button>
+        </Magnetic>
+        <Magnetic>
+          <Button variant="secondary" size="lg">
+            Resume
+          </Button>
+        </Magnetic>
       </div>
     </div>
   );
