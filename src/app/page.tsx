@@ -10,11 +10,17 @@ import {
   SectionHeading,
 } from "@/components/shared/typography";
 import { HeroSection } from "@/features/hero/hero-section"
+import { HirePilotSection } from "@/features/projects/hirepilot-section";
+import { TaskflowSection } from "@/features/projects/taskflow-section";
 export default function HomePage() {
   return (
     <AppShell>
       <main>
         <HeroSection />
+
+        <HirePilotSection />
+
+        <TaskflowSection />
 
         <Section className="flex min-h-screen items-center">
           <SectionContainer>
