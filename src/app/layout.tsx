@@ -6,9 +6,35 @@ import { Providers } from "@/providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Shivraj — AI & Full-Stack Systems Engineer",
+  title: {
+    default:
+      "Shivraj — AI & Full-Stack Systems Engineer",
+
+    template: "%s | Shivraj",
+  },
+
   description:
-    "Premium AI-native full-stack engineering portfolio showcasing production-grade SaaS systems, scalable backend architecture, realtime collaboration, and security infrastructure.",
+    "Premium AI-native full-stack engineering portfolio showcasing scalable SaaS systems, realtime collaboration platforms, authentication infrastructure, and cinematic digital experiences.",
+
+  keywords: [
+    "Full Stack Developer",
+    "AI Engineer",
+    "Next.js",
+    "TypeScript",
+    "React",
+    "Portfolio",
+    "SaaS",
+  ],
+
+  openGraph: {
+    title:
+      "Shivraj — AI & Full-Stack Systems Engineer",
+
+    description:
+      "Premium engineering portfolio focused on scalable systems, AI-native products, authentication infrastructure, and realtime collaboration.",
+
+    type: "website",
+  },
 };
 
 export default function RootLayout({

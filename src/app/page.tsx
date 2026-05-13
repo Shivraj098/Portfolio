@@ -1,18 +1,21 @@
 import { FadeIn } from "@/components/motion/fade-in";
 import { AppShell } from "@/components/layout/app-shell";
 import { Button } from "@/components/ui/button";
-import {
-  Section,
-  SectionContainer,
-} from "@/components/layout/section";
+import { Section, SectionContainer } from "@/components/layout/section";
 import {
   SectionDescription,
   SectionHeading,
 } from "@/components/shared/typography";
-import { HeroSection } from "@/features/hero/hero-section"
+import { HeroSection } from "@/features/hero/hero-section";
 import { HirePilotSection } from "@/features/projects/hirepilot-section";
 import { TaskflowSection } from "@/features/projects/taskflow-section";
 import { AuthflowSection } from "@/features/projects/authflow-section";
+
+import { FeaturedPosts } from "@/features/blog/featured-posts";
+
+import { ContactSection } from "@/features/contact/contact-section";
+
+import { GithubSection } from "@/features/github/github-section";
 export default function HomePage() {
   return (
     <AppShell>
@@ -23,11 +26,16 @@ export default function HomePage() {
 
         <TaskflowSection />
         <AuthflowSection />
+        <FeaturedPosts />
+
+        <GithubSection />
+
+        <ContactSection />
 
         <Section className="flex min-h-screen items-center">
           <SectionContainer>
             <FadeIn className="max-w-4xl">
-              <p className="mb-6 text-sm uppercase tracking-[0.2em] text-white/40">
+              <p className="mb-6 text-sm tracking-[0.2em] text-white/40 uppercase">
                 AI & Full-Stack Systems Engineer
               </p>
 
@@ -42,14 +50,9 @@ export default function HomePage() {
               </SectionDescription>
 
               <div className="mt-10 flex flex-wrap gap-4">
-                <Button size="lg">
-                  View Projects
-                </Button>
+                <Button size="lg">View Projects</Button>
 
-                <Button
-                  variant="secondary"
-                  size="lg"
-                >
+                <Button variant="secondary" size="lg">
                   Resume
                 </Button>
               </div>
