@@ -12,6 +12,7 @@ import {
 import { HeroSection } from "@/features/hero/hero-section"
 import { HirePilotSection } from "@/features/projects/hirepilot-section";
 import { TaskflowSection } from "@/features/projects/taskflow-section";
+import { AuthflowSection } from "@/features/projects/authflow-section";
 export default function HomePage() {
   return (
     <AppShell>
@@ -21,6 +22,7 @@ export default function HomePage() {
         <HirePilotSection />
 
         <TaskflowSection />
+        <AuthflowSection />
 
         <Section className="flex min-h-screen items-center">
           <SectionContainer>
