@@ -9,11 +9,13 @@ import {
   SectionDescription,
   SectionHeading,
 } from "@/components/shared/typography";
-
+import { HeroSection } from "@/features/hero/hero-section"
 export default function HomePage() {
   return (
     <AppShell>
       <main>
+        <HeroSection />
+
         <Section className="flex min-h-screen items-center">
           <SectionContainer>
             <FadeIn className="max-w-4xl">
