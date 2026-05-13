@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
-import "./globals.css";
-import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+import { Providers } from "@/providers";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Shivraj — AI & Full-Stack Systems Engineer",
@@ -18,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(GeistSans.className, "font-sans", geist.variable)}>
-      <body>{children}</body>
+    <html lang="en" className={GeistSans.className}>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
